@@ -24,6 +24,9 @@
         .n_point_wrap ul li > .sub_contents input {
             text-align:right; border:0; background:0; outline:none; padding:5px;
         }
+        #point_reset {
+            display: none;
+        }
         .n_point_wrap ul li > .sub_contents .won {}
         .n_point_wrap ul li > .sub_contents #user_point {}
         .n_point_wrap ul li > .sub_contents #use_point {}
@@ -55,7 +58,22 @@
         </ul>
         <button type="button" id="point_all_btn">전액사용</button>
         <script>
-            
+            const user_point = document.querySelector('#user_point')
+            user_point.value = 1000
+            const point_all_btn = document.querySelector('#point_all_btn')
+            const use_point = document.querySelector('#use_point')
+            const point_reset = document.querySelector('#point_reset')
+            console.log(point_all_btn, use_point, user_point)
+            point_all_btn.addEventListener('click',function(){
+                use_point.value = user_point.value
+                user_point.value = 0
+            })
+            if(use_point>1){
+                point_reset.style.display = 'block'
+            }else{
+                point_reset.style.display = 'none'
+            }
+
         </script>
     </div>
 </body>
