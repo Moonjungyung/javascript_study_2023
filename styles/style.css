@@ -1,0 +1,92 @@
+main {
+    width: 1200px; margin: 0 auto;
+    text-align: center;
+}
+/* 공통 제목 css */
+main section {}
+main section .category{
+    letter-spacing: -0.02em;
+}
+main section .category::after{
+content: ''; display: block;
+width: 20px; height: 2px;
+background-color: #888;
+margin: 10px auto 0;
+}
+main section h1 {
+    font-size: 1.777rem;
+    padding: 30px 0; letter-spacing: -0.02em;
+}
+main section .content {
+    color: #888; letter-spacing: -0.02em;
+    padding-bottom: 30px;
+}
+/* 카히스토리 영상 */
+/* 카히스토리 영상 - 탭 제목, 내용 */
+main #video .tab_title {
+    display: flex; flex-flow: row nowrap;
+    justify-content: center;
+}
+main #video .tab_title a {
+    margin-bottom: 20px;
+}
+main #video .tab_title a:first-child {
+    padding: 24px 40px;
+}
+main #video .tab_title a:last-child {
+    padding: 24px 30px;
+}
+main #video .tab_title .active {
+    border-bottom: 6px solid #189bfa;
+}
+main #video .tab_content {
+    width: 1200px; margin: 0 auto;
+}
+main #video .tab_content .tab_c1 {
+    position: relative;
+}
+main #video .tab_content .tab_c1 video {
+    width: 80%;
+}
+main #video .tab_content .tab_c1 img {
+    position: absolute; right: 3%; bottom: -10%;
+    width: 200px;
+}
+main #video .tab_content .tab_c2 {
+    width: 1200px; margin: 0 auto;
+}
+main #video .tab_content .tab_c2 img {
+    width: 80%;
+}
+    /* 자주 사용하는 메뉴 - 탭 제목 */
+    main #menu .tab_title {}
+    main #menu .tab_title a {}
+    main #menu .tab_title a .active {}
+    /* 자주 사용하는 메뉴 - 탭 내용 */
+main #menu .tab_content {}
+main #menu .tab_content .tab_c1 {
+    display: flex; flex-flow: row nowrap;
+}
+main #menu .tab_content .tab_c1 .left {}
+main #menu .tab_content .tab_c1 .left h2 {}
+main #menu .tab_content .tab_c1 .left p {}
+main #menu .tab_content .tab_c1 .left p img {}
+main #menu .tab_content .tab_c1 .left p a {}
+main #menu .tab_content .tab_c1 .right {
+    display: flex; flex-flow: column nowrap;
+    justify-content: space-between;
+}
+main #menu .tab_content .tab_c1 .right h2 {}
+main #menu .tab_content .tab_c1 .right ul {}
+main #menu .tab_content .tab_c1 .right ul li {
+    display: flex; flex-flow: row nowrap;
+}
+main #menu .tab_content .tab_c1 .right ul li p {}
+main #menu .tab_content .tab_c1 .right ul li p img {}
+main #menu .tab_content .tab_c1 .right ul li .txt {
+    display: flex; flex-flow: column nowrap;
+    align-items: baseline;
+}
+main #menu .tab_content .tab_c1 .right ul li .txt .num {}
+main #menu .tab_content .tab_c1 .right ul li .txt .con {}
+main #menu .tab_content .tab_c1 .right ul li .txt .con span {}
