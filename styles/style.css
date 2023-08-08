@@ -58,35 +58,75 @@ main #video .tab_content .tab_c2 {
 main #video .tab_content .tab_c2 img {
     width: 80%;
 }
-    /* 자주 사용하는 메뉴 - 탭 제목 */
-    main #menu .tab_title {}
-    main #menu .tab_title a {}
-    main #menu .tab_title a .active {}
-    /* 자주 사용하는 메뉴 - 탭 내용 */
+/* 자주 사용하는 메뉴 - 탭 제목 */
+main #menu {
+    margin-top: 60px;
+}
+main #menu .tab_title {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #888;
+    margin-bottom: 60px;
+}
+main #menu .tab_title a {
+    width: 150px;
+    padding: 20px 0; margin-right: 10px;
+    position: relative; bottom: -1px;
+    border: 1px solid #888; color: #888;
+    background: #fff;
+    border-bottom: 1px solid #888;
+}
+main #menu .tab_title a:last-child {
+    margin-right: 0;
+}
+main #menu .tab_title .active {
+    border: 1px solid #888;
+    border-top: 6px solid #189bfa;
+    border-bottom: 1px solid #fff;
+}
+/* 자주 사용하는 메뉴 - 탭 내용 */
 main #menu .tab_content {}
 main #menu .tab_content .tab_c1 {
-    display: flex; flex-flow: row nowrap;
+    display: flex;
 }
-main #menu .tab_content .tab_c1 .left {}
-main #menu .tab_content .tab_c1 .left h2 {}
+main #menu .tab_content .tab_c1 .left {
+    text-align: start; width: 48%;
+}
+main #menu .tab_content .tab_c1 .left h2 {
+    font-size: 1.777rem; color: #189bfa;
+}
 main #menu .tab_content .tab_c1 .left p {}
-main #menu .tab_content .tab_c1 .left p img {}
-main #menu .tab_content .tab_c1 .left p a {}
-main #menu .tab_content .tab_c1 .right {
-    display: flex; flex-flow: column nowrap;
-    justify-content: space-between;
+main #menu .tab_content .tab_c1 .left p img {
+    width: 95%;     padding: 20px 0;
 }
-main #menu .tab_content .tab_c1 .right h2 {}
+main #menu .tab_content .tab_c1 .left p a {
+    color: #189bfa;
+}
+main #menu .tab_content .tab_c1 .right {
+    text-align: start; width: 52%;
+}
+main #menu .tab_content .tab_c1 .right h2 {
+    font-size: 1.333rem; margin-bottom: 20px;
+}
 main #menu .tab_content .tab_c1 .right ul {}
 main #menu .tab_content .tab_c1 .right ul li {
     display: flex; flex-flow: row nowrap;
+    width: 100%; border-bottom: 1px dashed #888;
+    padding: 20px 0;
 }
 main #menu .tab_content .tab_c1 .right ul li p {}
-main #menu .tab_content .tab_c1 .right ul li p img {}
-main #menu .tab_content .tab_c1 .right ul li .txt {
-    display: flex; flex-flow: column nowrap;
-    align-items: baseline;
+main #menu .tab_content .tab_c1 .right ul li p img {
+    margin-right: 30px;
 }
-main #menu .tab_content .tab_c1 .right ul li .txt .num {}
-main #menu .tab_content .tab_c1 .right ul li .txt .con {}
+main #menu .tab_content .tab_c1 .right ul li .txt {}
+main #menu .tab_content .tab_c1 .right ul li .txt .num {
+    color: #189bfa; font-weight: 500;
+    margin-bottom: 10px;
+}
+main #menu .tab_content .tab_c1 .right ul li .txt .con {
+    font-weight: 500; font-size: 1.333rem;
+}
 main #menu .tab_content .tab_c1 .right ul li .txt .con span {}
+main #menu .tab_content .tab_c2 {height: 400px;}
+main #menu .tab_content .tab_c3 {height: 400px;}
+main #menu .tab_content .tab_c4 {height: 400px;}
