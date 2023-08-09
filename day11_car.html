@@ -142,6 +142,11 @@
             videoTabTitle.forEach(function(target, index, array){
                 target.addEventListener('click',function(e){
                     e.preventDefault()
+                    //8/9 추가 class active 호출용
+                    //DOM.classList.add('적용클래스명')
+                    //DOM.classList.remove('제거클래스명')
+                    for(let i of videoTabTitle){i.classList.remove('active')}
+                    target.classList.add('active')
                      //클릭 이벤트 안에서는 이벤트대상의 인덱스만 인식한다.
                     console.log(index)
                     //모두 숨기기(클릭한 대상 관계없이)
@@ -164,6 +169,8 @@
                 //2. 각 탭 제목 클릭 시 연관된 내용 보이기 forEach문 구성
                 tabTitle.forEach(function(t,i,a){
                     t.addEventListener('click',function(e){
+                        for(let i of tabTitle){i.classList.remove('active')}
+                        t.classList.add('active')
                         e.preventDefault()
                         for(let i of tabContent){i.style.display = 'none'}
                     tabContent[i].style.display = 'flex'

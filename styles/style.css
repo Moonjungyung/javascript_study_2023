@@ -36,6 +36,7 @@ main #video .tab_title a:first-child {
 main #video .tab_title a:last-child {
     padding: 24px 30px;
 }
+/* 탭 제목 활성화 디자인 + js class 호출용 */
 main #video .tab_title .active {
     border-bottom: 6px solid #189bfa;
 }
@@ -79,6 +80,7 @@ main #menu .tab_title a {
 main #menu .tab_title a:last-child {
     margin-right: 0;
 }
+/* 탭 제목 활성화 디자인 + js class 호출용 */
 main #menu .tab_title .active {
     border: 1px solid #888;
     border-top: 6px solid #189bfa;
