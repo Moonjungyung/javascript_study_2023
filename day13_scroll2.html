@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>day13_scroll-1</title>
+    <style>
+        body,html{
+            height: 300vh;
+            background: linear-gradient(lightblue, lightcoral, lightgoldenrodyellow,lightseagreen);
+            /* 스크롤 제어 애니메이션 CSS(body 선택자에) */
+            scroll-behavior: smooth;
+        }
+        #pst {
+            position: fixed; left: 50px; top: 50px;
+            background: #eee; padding: 10px;
+        }
+        #container section {
+            line-height: 100vh; text-align: center;
+            border: 5px solid #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="pst">
+        <button class="tab" type="button">상품정보</button>
+        <button class="tab" type="button">리뷰</button>
+        <button class="tab" type="button">질문답변</button>
+    </div>    
+    <div id="container">
+        <section><h1>상품정보</h1></section>
+        <section><h1>리뷰</h1></section>
+        <section><h1>질문답변</h1></section>
+    </div>
+    <script>
+        // 자바스크립트 스크롤 제어
+        const tab = document.querySelectorAll('.tab')
+        const section = document.querySelectorAll('section')
+        console.log(tab, section)
+        
+        // tab[1].addEventListener('click',function(){
+        //     window.scrollTo(0,section[1].offsetTop)
+        // })
+        //for문 위 이벤트 작성
+        tab.forEach(function(t,i){
+            t.addEventListener('click',function(){
+                window.scrollTo(0, section[i].offsetTop)
+            })
+        })
+    </script>
+</body>
+</html>
